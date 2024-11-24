@@ -39,7 +39,7 @@ export default function HeaderClient() {
 
 
     return (
-        <nav>
+        <nav className=' sticky top-0 left-0 right-0 z-50'>
             <div className=' flex justify-between items-center px-5 sm:px-10 bg-[#f5f3ff]'>
                 <div className=' flex items-center gap-2 sm:gap-5'>
 

@@ -1,7 +1,9 @@
+import HeroServer from "@/components/hero/HeroServer";
+
 export default function Home() {
   return (
     <div>
-      <h2>hello</h2>
+      <HeroServer />
     </div>
   );
 }

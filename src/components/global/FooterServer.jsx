@@ -45,9 +45,10 @@ const navData = {
 export default function FooterServer() {
     return (
         <footer>
-            <div className='py-10   px-5 sm:px-10 font-manrope bg-[#1d1d1d] text-[#ffffff]'>
-                <div className=' flex flex-col lg:flex-row items-center gap-4 lg:items-end justify-between '>
+            <div className='py-10  px-5 sm:px-10 font-manrope bg-[#1d1d1d] text-[#ffffff]'>
 
+                {/* Logo, Subheading, Newsletter signUp */}
+                <div className=' flex flex-col lg:flex-row items-center gap-4 lg:items-end justify-between '>
                     <div className=' flex flex-col max-w-lg'>
                         <div className=' relative h-14 sm:h-20 w-36 sm:w-44'>
                             <Image src={logoDark} className=' absolute object-contain' alt='LogoDark' fill />
@@ -67,6 +68,7 @@ export default function FooterServer() {
                     </div>
                 </div>
 
+                {/* Contact, NavLinks, socialLinks */}
                 <ul className=' flex gap-4  flex-col items-start sm:flex-row justify-between pt-10'>
                     <li>
                         <p><strong>Contact Us</strong></p>
