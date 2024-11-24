@@ -39,20 +39,20 @@ export default function HeaderClient() {
 
 
     return (
-        <>
-            <nav className=' flex justify-between items-center px-10 bg-[#f5f3ff]'>
-                <div className=' flex items-center gap-5'>
+        <nav>
+            <div className=' flex justify-between items-center px-5 sm:px-10 bg-[#f5f3ff]'>
+                <div className=' flex items-center gap-2 sm:gap-5'>
 
                     {/* SmallScreen: Menu Icon */}
-                    <div onClick={() => setOpen(!open)} className=' block lg:hidden relative h-9 w-9'>
+                    <div onClick={() => setOpen(!open)} className=' block lg:hidden relative h-7 w-7 sm:h-9 sm:w-9'>
                         {
-                            open ? <RxCross2 className=' w-9 h-9' /> :
+                            open ? <RxCross2 className=' h-7 w-7 sm:w-9 sm:h-9' /> :
                             <Image src={menu} className=' absolute object-contain' alt='menu' fill />
                         }
                     </div>
 
                     {/* Logo */}
-                    <div className=' relative object-cover h-20 w-44'>
+                    <div className=' relative object-cover h-14 sm:h-20 w-36 sm:w-44'>
                         <Image className=' absolute object-contain' src={logo} alt='logo' fill />
                     </div>
                 </div>
@@ -69,7 +69,7 @@ export default function HeaderClient() {
                     {/* Search  */}
                     <div className=' flex items-center relative'>
                         {/* SmallScreen: search modal */}
-                        <button onClick={() => setSearchOpen(!searchOpen)} className=' block md:hidden md:-mr-8 h-7 w-7 relative'>
+                        <button onClick={() => setSearchOpen(!searchOpen)} className=' block md:hidden md:-mr-8 h-6 w-6 sm:h-7 sm:w-7 relative'>
                             <Image src={searchIcon} className=' absolute object-cover' alt=' searchIcon' fill />
                         </button>
 
@@ -81,19 +81,19 @@ export default function HeaderClient() {
 
                     {/* Cart and user */}
                     <div className=' flex gap-5'>
-                        <div className='  h-8 w-9 relative'>
+                        <div className=' h-6 w-7 sm:h-8 sm:w-9 relative'>
                             <Image src={cart} className=' absolute object-cover' alt=' searchIcon' fill />
                         </div>
-                        <div className=' h-8 w-8 relative'>
+                        <div className=' h-6 w-6 sm:h-8 sm:w-8 relative'>
                             <Image src={avatar} className=' absolute object-cover' alt=' searchIcon' fill />
                         </div>
                     </div>
                 </div>
-            </nav>
+            </div>
 
             {/* SmallScreen: Dropdown */}
             <div 
-                className={`bg-[#f5f3ff] z-50 fixed top-20 w-full text-2xl gap-10 text-center flex flex-col ${open ? 'h-screen opacity-100 py-10' : 'h-0 opacity-0'} transition-all duration-300 ease-in-out overflow-hidden`}
+                className={`bg-[#f5f3ff] z-50 fixed top-14 sm:top-20 w-full text-2xl gap-10 text-center flex flex-col ${open ? 'h-screen opacity-100 py-10' : 'h-0 opacity-0'} transition-all duration-300 ease-in-out overflow-hidden`}
             >
                 <div className='flex flex-col'>
                     {
@@ -105,6 +105,6 @@ export default function HeaderClient() {
             </div>
                 
             <SearchModal open={searchOpen} setOpen={setSearchOpen} />
-        </>
+        </nav>
     )
 }
