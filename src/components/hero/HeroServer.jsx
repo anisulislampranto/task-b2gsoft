@@ -70,7 +70,7 @@ export default function HeroServer() {
                                     </div>
                                     <div>
                                         <h3>{el.heading}</h3>
-                                        <p>{el.subHeading}</p>
+                                        <p className=' text-sm'>{el.subHeading}</p>
                                     </div>
                                 </div>
                             </li>
