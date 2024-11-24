@@ -2,6 +2,17 @@ import React from 'react'
 
 export default function FooterServer() {
   return (
-    <div>FooterServer</div>
+    <footer>
+        <div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+
+        </div>
+        <div>
+            
+        </div>
+    </footer>
   )
 }
