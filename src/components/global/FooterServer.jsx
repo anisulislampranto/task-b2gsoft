@@ -87,9 +87,9 @@ export default function FooterServer() {
                         <p><strong>Social Links</strong></p>
                         <div className=' flex gap-5 mt-2'>
                             {navData.socialLinks.map((el) =>
-                                <div className=' relative h-7 w-7 '>
+                                <Link href={el.url} className=' relative h-7 w-7 '>
                                     <Image src={el.icon} className=' absolute object-contain rounded-full' alt='socialMedia' fill />
-                                </div>
+                                </Link>
                             )}
                         </div>
                     </li>

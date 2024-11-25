@@ -62,7 +62,7 @@ export default function FeaturedClient() {
     };
 
     return (
-        <section className='px-5 md:px-10 py-20 bg-[#f6f5fe]'>
+        <section className='px-5 md:px-10 py-20 '>
 
             {/* Heading, Subheading, Arrows */}
             <div className='flex justify-between'>
@@ -92,18 +92,22 @@ export default function FeaturedClient() {
                 className='flex gap-10 overflow-x-scroll mt-10'
             >
                 {featuredProducts.map((el, index) => (
-                    <li key={index} className='p-2 flex flex-col gap-4 bg-white rounded-lg'>
-                        <div className='relative h-80 w-72 bg-[#f6f5fe] rounded-lg'>
+                    <li key={index} className='p-2 flex flex-col gap-4 bg-white rounded-2xl'>
+                        <div className='relative h-80 w-72 bg-[#f6f5fe] rounded-[8px]'>
                             <Image className='absolute object-contain' src={el.image} alt='productImage' fill />
                         </div>
                         <div className='flex justify-between items-center'>
                             <p>{el.name}</p>
                             <p><strong>BDT {el.price}</strong></p>
                         </div>
-                        <button className='p-1 hover:text-white hover:bg-[#7e53d4] rounded-md border border-[#7e53d4] text-[#7e53d4]'>Add to Cart</button>
+                        <button className='p-2 hover:text-white hover:bg-[#7e53d4] rounded-[8px] border border-[#7e53d4] text-[#7e53d4]'>Add to Cart</button>
                     </li>
                 ))}
             </ul>
+
+            <div className=' flex justify-center mt-10'>
+                <button className='bg-[#7e53d4] hover:bg-transparent border border-[#7e53d4] hover:text-[#7e53d4] text-white p-2 w-36 rounded-lg'>See more</button>
+            </div>
         </section>
     );
 }
