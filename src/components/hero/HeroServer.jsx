@@ -2,10 +2,10 @@ import Image from 'next/image';
 import React from 'react';
 import heroImage2 from '../../assets/hero-image-2.webp';
 import heroImage from '../../assets/hero-image.webp';
-import arrowUpRight from '../../assets/arrow-up-right-01.svg'
 import truckIcon from '../../assets/truck-delivery.svg'
 import exchangeIcon from '../../assets/exchange-01.svg'
 import paymentIcon from '../../assets/payment-02.svg'
+import CTAButton from '@/utils/CTAButton';
 
 const heroData = [
     {
@@ -44,12 +44,7 @@ export default function HeroServer() {
                 <div className="absolute inset-0 z-30 flex flex-col items-center justify-center gap-3 text-center">
                     <h1 className="text-4xl md:text-5xl">Elevate Your Everyday Style</h1>
                     <p className="md:text-lg">Discover the Latest Trends in Sustainable Fashion</p>
-                    <div className="flex items-center justify-center mt-2">
-                        <button className="bg-[#9071e1] rounded-full px-5 p-2">Shop Now</button>
-                        <button className="bg-[#9071e1] rounded-full p-2">
-                            <Image src={arrowUpRight} width={20} height={20} alt="Arrow Up Right Icon" />
-                        </button>
-                    </div>
+                    <CTAButton />
                 </div>
             </div>
 
