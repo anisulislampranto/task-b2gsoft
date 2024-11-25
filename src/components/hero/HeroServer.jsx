@@ -27,8 +27,9 @@ const heroData = [
 
 export default function HeroServer() {
     return (
-        <div className='font-manrope text-[#ffffff] '>
+        <section className='font-manrope text-[#ffffff] '>
             <div className="relative h-[37rem] w-full ">
+                {/* Hero Bg Image */}
                 <Image
                     src={heroImage}
                     className=" z-20 absolute object-cover [object-position:50%_20%]"
@@ -36,8 +37,10 @@ export default function HeroServer() {
                     fill
                 />
                 
+                {/* Shadow over Hero Bg Image */}
                 <div className="absolute inset-0 bg-black opacity-50 z-30"></div>
 
+                {/* Text Over Hero Bg Image */}
                 <div className="absolute inset-0 z-30 flex flex-col items-center justify-center gap-3 text-center">
                     <h1 className="text-4xl md:text-5xl">Elevate Your Everyday Style</h1>
                     <p className="md:text-lg">Discover the Latest Trends in Sustainable Fashion</p>
@@ -48,9 +51,10 @@ export default function HeroServer() {
                         </button>
                     </div>
                 </div>
-
             </div>
 
+
+            {/* Section below heroImage */}
             <div className='relative h-[18rem] lg:h-[7rem] w-full px-8 md:px-20'>
                 <Image
                     src={heroImage2}
@@ -61,7 +65,7 @@ export default function HeroServer() {
                 <div className="absolute inset-0 bg-[#6441C2E5] opacity-100 z-30"></div>
 
                 <div className=' flex items-center justify-center h-[18rem] lg:h-[7rem]'>
-                    <ul className=' flex flex-col gap-5 lg:flex-row items-start justify-between '>    
+                    <ul className=' flex flex-col gap-10 lg:flex-row items-start justify-between '>    
                         {heroData.map((el) =>
                             <li key={el.heading} >
                                 <div className=' flex gap-5 items-start relative z-40'>
@@ -77,9 +81,8 @@ export default function HeroServer() {
                         )}
                     </ul>
                 </div>
-
             </div>
-            
-        </div>
+
+        </section>
     );
 }
