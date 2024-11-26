@@ -6,7 +6,8 @@ import hoodie from '../../assets/hoodie.webp';
 import plazu from '../../assets/pant.webp';
 import jacket from '../../assets/jacket.webp';
 import Image from 'next/image';
-import ArrowIcon from '@/utils/ArrowIcon';
+import { useScroll } from '@/hooks/useScroll';
+import SectionHeader from '../SectionHeader/SectionHeader';
 
 const featuredProducts = [
     {
@@ -42,49 +43,20 @@ const featuredProducts = [
 ];
 
 export default function FeaturedClient() {
-    const scrollRef = useRef(null);
+    const { scroll } = useScroll(320);
+    const scrollRef = useRef();
 
-    const scroll = (direction) => {
-        if (scrollRef.current) {
-            const scrollAmount = 320
-            if (direction === 'left') {
-                scrollRef.current.scrollBy({
-                    left: -scrollAmount,
-                    behavior: 'smooth'
-                });
-            } else if (direction === 'right') {
-                scrollRef.current.scrollBy({
-                    left: scrollAmount,
-                    behavior: 'smooth'
-                });
-            }
-        }
-    };
 
     return (
         <section className='px-5 md:px-10 py-20 '>
 
             {/* Heading, Subheading, Arrows */}
-            <div className='flex justify-between'>
-                <div>
-                    <p className='font-manrope text-lg text-[#7e53d4]'>FEATURED PRODUCT</p>
-                    <p className='font-manrope text-[28px]'><strong>New Arrivals</strong></p>
-                </div>
-                <div className='flex items-center gap-2'>
-                    <div
-                        onClick={() => scroll('left')}
-                        className='cursor-pointer flex items-center p-1 group h-9 w-9 border-[1.5px] rounded-full border-[#7e53d4] hover:bg-[#7e53d4]'
-                    >
-                        <ArrowIcon />
-                    </div>
-                    <div
-                        onClick={() => scroll('right')}
-                        className='cursor-pointer rotate-180 flex items-center p-1 group h-9 w-9 border-[1.5px] rounded-full border-[#7e53d4] hover:bg-[#7e53d4]'
-                    >
-                        <ArrowIcon />
-                    </div>
-                </div>
-            </div>
+            <SectionHeader
+                title="FEATURED PRODUCT"
+                subtitle="New Arrivals"
+                onLeftArrowClick={() => scroll('left', scrollRef)}
+                onRightArrowClick={() => scroll('right', scrollRef)}
+            />
 
             {/* Products */}
             <ul

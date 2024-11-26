@@ -2,6 +2,7 @@ import CategoriesClient from "@/components/categories/CategoriesClient";
 import FeaturedClient from "@/components/featured/FeaturedClient";
 import HeroServer from "@/components/hero/HeroServer";
 import NewCustomerDealServer from "@/components/NewCustomerDeal/NewCustomerDealServer";
+import SummerDealClient from "@/components/SummerDeal/SummerDealClient";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <FeaturedClient />
       <NewCustomerDealServer />
       <CategoriesClient />
+      <SummerDealClient />
     </div>
   );
 }
