@@ -1,0 +1,224 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "image": "/images/shirt-2.webp",
+            "name": "Check Red Shirt",
+            "price": "2,300",
+            "ratings": [
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 4,
+                    "name": "Cameron Williamvvvson"
+                },
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "image": "/images/saree-2.webp",
+            "name": "Woman wearing sari",
+            "price": "2,300",
+            "ratings": [
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 3,
+                    "name": "Cameron Williamvvvson"
+                },
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                },
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                },
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "image": "/images/shirt.webp",
+            "name": "Half Sleeve Shirt",
+            "price": "2,300",
+            "ratings": [
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 5,
+                    "name": "Cameron Williamvvvson"
+                },
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                },
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                },
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                },
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "image": "/images/jama.webp",
+            "name": "Dress Children",
+            "price": "2,300",
+            "ratings": [
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                },
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                },
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                },
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                },
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "image": "/images/shirt-2.webp",
+            "name": "Check Red Shirt",
+            "price": "2,300",
+            "ratings": [
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 4,
+                    "name": "Cameron Williamvvvson"
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "image": "/images/saree-2.webp",
+            "name": "Woman wearing sari",
+            "price": "2,300",
+            "ratings": [
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 3,
+                    "name": "Cameron Williamvvvson"
+                },
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "image": "/images/shirt.webp",
+            "name": "Half Sleeve Shirt",
+            "price": "2,300",
+            "ratings": [
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 5,
+                    "name": "Cameron Williamvvvson"
+                },
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                },
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                },
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "image": "/images/jama.webp",
+            "name": "Dress Children",
+            "price": "2,300",
+            "ratings": [
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                },
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                },
+                {
+                    "userDp": "/images/avatar.webp",
+                    "comment": "Very Nice",
+                    "rating": 2,
+                    "name": "Cameron Williamvvvson"
+                }
+            ]
+        }
+    ]
+}

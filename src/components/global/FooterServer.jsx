@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
-import logoDark from '../../assets/logo-dark.svg'
-import facebook from '../../assets/Facebook.svg'
-import linkedIn from '../../assets/Linkedin.svg'
-import x from '../../assets/Twitter.svg'
+import logoDark from '../../../public/images/logo-dark.svg'
+import facebook from '../../../public/images/Facebook.svg'
+import linkedIn from '../../../public/images/Linkedin.svg'
+import x from '../../../public/images/Twitter.svg'
 import Link from 'next/link'
 
 const navData = {
@@ -70,11 +70,11 @@ export default function FooterServer() {
 
                 {/* Contact, NavLinks, socialLinks */}
                 <ul className=' flex gap-4  flex-col items-start sm:flex-row justify-between pt-10'>
-                    <li>
+                    <li key={1}>
                         <p><strong>Contact Us</strong></p>
                         <p className=' mt-2'>{navData.contact}</p>
                     </li>
-                    <li className=' grid grid-cols-1 gap-3 items-start sm:grid-cols-2 sm:w-[40%]'>
+                    <li key={2} className=' grid grid-cols-1 gap-3 items-start sm:grid-cols-2 sm:w-[40%]'>
                         {
                             navData.navLinks.map((el) => 
                                 <Link href={el.url} key={el.url}>
@@ -83,7 +83,7 @@ export default function FooterServer() {
                             )
                         }
                     </li>
-                    <li>
+                    <li key={3}>
                         <p><strong>Social Links</strong></p>
                         <div className=' flex gap-5 mt-2'>
                             {navData.socialLinks.map((el) =>

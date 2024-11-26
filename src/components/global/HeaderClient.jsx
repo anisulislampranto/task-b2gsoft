@@ -2,13 +2,15 @@
 
 import Image from 'next/image';
 import React, { useState } from 'react'
-import logo from '../../assets/logo.svg'
-import searchIcon from '../../assets/search-01.svg'
-import avatar from '../../assets/user.svg'
-import cart from '../../assets/shopping.svg'
+
+import logo from '../../../public/images/logo.svg'
+import searchIcon from '../../../public/images/search-01.svg'
+import avatar from '../../../public/images/user.svg'
+import cart from '../../../public/images/shopping.svg'
+import menu from '../../../public/images/menu-02.svg'
+
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import menu from '../../assets/menu-02.svg'
 import { RxCross2 } from "react-icons/rx";
 import SearchModal from '../ui/SearchModal';
 

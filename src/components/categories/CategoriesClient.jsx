@@ -2,9 +2,8 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import men from '../../assets/men-featured.webp';
-import women from '../../assets/women.webp';
-import kid from '../../assets/children.webp';
+import men from '../../../public/images/men-featured.webp';
+import women from '../../../public/images/women.webp';
 import CTAButton from '@/utils/CTAButton';
 
 const categories = [

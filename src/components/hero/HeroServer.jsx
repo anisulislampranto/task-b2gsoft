@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import React from 'react';
-import heroImage2 from '../../assets/hero-image-2.webp';
-import heroImage from '../../assets/hero-image.webp';
-import truckIcon from '../../assets/truck-delivery.svg'
-import exchangeIcon from '../../assets/exchange-01.svg'
-import paymentIcon from '../../assets/payment-02.svg'
+import heroImage2 from '../../../public/images/hero-image-2.webp';
+import heroImage from '../../../public/images/hero-image.webp';
+import truckIcon from '../../../public/images/truck-delivery.svg'
+import exchangeIcon from '../../../public/images/exchange-01.svg'
+import paymentIcon from '../../../public/images/payment-02.svg'
 import CTAButton from '@/utils/CTAButton';
 
 const heroData = [

@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useRef } from 'react';
-import saree from '../../assets/saree.webp';
-import hoodie from '../../assets/hoodie.webp';
-import plazu from '../../assets/pant.webp';
-import jacket from '../../assets/jacket.webp';
+import saree from '../../../public/images/saree.webp';
+import hoodie from '../../../public/images/hoodie.webp';
+import plazu from '../../../public/images/pant.webp';
+import jacket from '../../../public/images/jacket.webp';
 import { useScroll } from '@/hooks/useScroll';
 import SectionHeader from '../SectionHeader/SectionHeader';
 import Products from '../products/Products';

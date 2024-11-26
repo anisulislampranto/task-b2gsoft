@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import coupleImage from '../../assets/couple.webp'
+import coupleImage from '../../../public/images/couple.webp'
 import CTAButton from '@/utils/CTAButton'
 
 

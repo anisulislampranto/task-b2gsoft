@@ -2,74 +2,11 @@
 
 import React, { useRef } from 'react';
 import SectionHeader from '../SectionHeader/SectionHeader';
-import checkRedShirt from '../../assets/shirt-2.webp';
-import userAvatar from '../../assets/avatar.webp';
-import saree2 from '../../assets/saree-2.webp';
-import shirt from '../../assets/shirt.webp';
-import dress from '../../assets/jama.webp';
 import { useScroll } from '@/hooks/useScroll';
 import Image from 'next/image';
 import StarIcon from '@/utils/StarIcon';
+import products from '../../assets/products.json'
 
-
-const productData = [
-    {
-        id:1,
-        image: checkRedShirt,
-        name: 'Check Red Shirt',
-        price: '2,300',
-        ratings: [{ userDp: userAvatar, comment: 'Very Nice', rating: 4, name: 'Cameron Williamvvvson' }, { userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }],
-    },
-    {
-        id:2,
-        image: saree2,
-        name: 'Woman wearing sari',
-        price: '2,300',
-        ratings: [{ userDp: userAvatar, comment: 'Very Nice', rating: 3, name: 'Cameron Williamvvvson' }, { userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }, { userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }, { userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }],
-    },
-    {
-        id:3,
-        image: shirt,
-        name: 'Half Sleeve Shirt',
-        price: '2,300',
-        ratings: [{ userDp: userAvatar, comment: 'Very Nice', rating: 5, name: 'Cameron Williamvvvson' }, { userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }, { userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }, { userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }, { userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }],
-    },
-    {
-        id:4,
-        image: dress,
-        name: 'Dress Children',
-        price: '2,300',
-        ratings: [{ userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }, { userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }, { userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }, { userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }, { userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }],
-    },
-    {
-        id:5,
-        image: checkRedShirt,
-        name: 'Check Red Shirt',
-        price: '2,300',
-        ratings: [{ userDp: userAvatar, comment: 'Very Nice', rating: 4, name: 'Cameron Williamvvvson' }],
-    },
-    {
-        id:6,
-        image: saree2,
-        name: 'Woman wearing sari',
-        price: '2,300',
-        ratings: [{ userDp: userAvatar, comment: 'Very Nice', rating: 3, name: 'Cameron Williamvvvson' }, { userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }],
-    },
-    {
-        id:7,
-        image: shirt,
-        name: 'Half Sleeve Shirt',
-        price: '2,300',
-        ratings: [{ userDp: userAvatar, comment: 'Very Nice', rating: 5, name: 'Cameron Williamvvvson' }, { userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }, { userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }, { userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }],
-    },
-    {
-        id:8,
-        image: dress,
-        name: 'Dress Children',
-        price: '2,300',
-        ratings: [{ userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }, { userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }, { userDp: userAvatar, comment: 'Very Nice', rating: 2, name: 'Cameron Williamvvvson' }],
-    },
-];
 
 const ProductList = ({ scrollRef, productData }) => {
     const MAX_RATING = 5;
@@ -101,6 +38,8 @@ const ProductList = ({ scrollRef, productData }) => {
                             fill
                         />
                     </div>
+                    
+                    {console.log('image', product)}
 
                     {/* Ratings */}
                     <div className='flex gap-2 items-center'>
@@ -152,8 +91,8 @@ export default function SummerDealClient() {
             />
 
             {/* Product List */}
-            <ProductList scrollRef={scrollRef1} productData={productData} />
-            <ProductList scrollRef={scrollRef2} productData={productData} />
+            <ProductList scrollRef={scrollRef1} productData={products.products} />
+            <ProductList scrollRef={scrollRef2} productData={products.products} />
 
             <div className=' flex justify-center mt-10'>
                 <button className='bg-[#7e53d4] hover:bg-transparent border border-[#7e53d4] hover:text-[#7e53d4] text-white p-2 w-36 rounded-lg'>See more</button>

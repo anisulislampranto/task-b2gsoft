@@ -1,31 +1,42 @@
-'use client';
+import ProductDetailsClient from "@/components/ProductDetails/ProductDetailsClient";
+import mockData from "../../../assets/products.json";
 
-import { featuredProducts } from '@/components/featured/FeaturedClient';
-import Products from '@/components/products/Products';
-import { NavArrows } from '@/components/SectionHeader/SectionHeader'
-import { useScroll } from '@/hooks/useScroll';
-import React, { useRef } from 'react'
+export async function generateStaticParams() {
+  return mockData.products.map((product) => ({
+    id: product.id,
+  }));
+}
 
-export default function ProductDetailsPage() {
-  const { scroll } = useScroll(320);
-  const scrollRef = useRef();
+export async function getProductDetails(id) {
+  try {
+    const product = mockData.products.find((product) => product.id === id);
 
-  return (
-    <div className=' px-5 md:px-10 py-20'>
-      
+    if (!product) {
+      throw new Error("Product not found");
+    }
 
-      {/* Related Products */}
-      <div>
-        <div className=' flex justify-between'>
-          <p className=' font-manrope font-bold text-3xl'>Related Products</p>
-          <NavArrows
-            onLeftArrowClick={() => scroll('left', scrollRef)}
-            onRightArrowClick={() => scroll('right', scrollRef)}
-          />
-        </div>
-        <Products products={featuredProducts} scrollRef={scrollRef} />
-      </div>
-      
-    </div>
-  )
+    return { product };
+  } catch (error) {
+    console.error("Error fetching product details:", error);
+    return null;
+  }
+}
+
+export async function generateMetadata({ params }) {
+  const productDetails = await getProductDetails(params.id);
+
+  return {
+    title: productDetails ? productDetails.product.name : "Product Details",
+    description: `Details about ${productDetails?.product?.name}`,
+  };
+}
+
+export default async function Page({ params }) {
+  const productDetails = await getProductDetails(params.id);
+
+  if (!productDetails) {
+    return <div className="h-screen text-center flex items-center justify-center">No details found for this Product.</div>;
+  }
+
+  return <ProductDetailsClient productDetails={productDetails.product} />;
 }

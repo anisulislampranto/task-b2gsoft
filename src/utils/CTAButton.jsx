@@ -1,5 +1,5 @@
 import React from 'react'
-import arrowUpRight from '../assets/arrow-up-right-01.svg'
+import arrowUpRight from '../../public/images/arrow-up-right-01.svg'
 import Image from 'next/image'
 
 export default function CTAButton() {
