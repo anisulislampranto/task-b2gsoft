@@ -15,6 +15,7 @@ export default function ProductDetailsClient({ productDetails }) {
 
     return (
         <div className='px-5 md:px-10 py-20 bg-[#f4f8ff]'>
+            
             {/* Product Overview */}
             <ProductOverviewClient productDetails={productDetails} />
 

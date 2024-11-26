@@ -10,6 +10,7 @@ import arrowRight from '../../../public/images/arrow-right-02.svg'
 import StarRating from '@/utils/StarRating';
 import { FiPlus } from "react-icons/fi";
 import { FiMinus } from "react-icons/fi";
+import cart from '../../../public/images/shopping-basket-01.svg'
 
 
 
@@ -34,13 +35,19 @@ export default function ProductOverviewClient({productDetails}) {
 
     const totalRatings = productDetails.ratings.length;
 
-    const getPercentage = (count) => ((count / totalRatings) * 100).toFixed(1);
-
-    console.log('productDetails', productDetails);
     
 
     return (
         <section className='flex flex-col xl:flex-row'>
+            {/* Sticky cart */}
+            <div className='hidden bg-[#581fc1] w-28 p-4 text-white font-manrope fixed lg:flex items-center flex-col right-0 top-[50%] z-30 rounded-tl-2xl rounded-bl-2xl'>
+                <div className='relative h-9 w-9 '>
+                    <Image className=' absolute object-contain' src={cart} alt='image' fill />
+                </div>
+                <p>Your bag</p>
+                <p>0</p>
+            </div>
+
             {/* ProductImage */}
             <div className=' flex flex-col items-center xl:items-start gap-5 w-full xl:w-[50%] mt-5'>
                 {/* Big Image */}

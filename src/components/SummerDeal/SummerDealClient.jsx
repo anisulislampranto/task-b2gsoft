@@ -7,15 +7,16 @@ import Image from 'next/image';
 import StarIcon from '@/utils/StarIcon';
 import products from '../../assets/products.json'
 import StarRating from '@/utils/StarRating';
+import Link from 'next/link';
 
 
 const ProductList = ({ scrollRef, productData }) => {
 
 
     return (
-        <ul ref={scrollRef} className="flex gap-10 overflow-x-scroll mt-10">
+        <div ref={scrollRef} className="flex gap-10 overflow-x-scroll mt-10">
             {productData.map((product, i) => (
-                <li key={i} className="p-2 flex flex-col gap-4 bg-white rounded-2xl">
+                <Link href={`/product/${product.id}`} key={i} className="p-2 flex flex-col gap-4 bg-white rounded-2xl">
                     <div className="relative h-80 w-72 bg-[#f6f5fe] rounded-[8px]">
                         <div className=' absolute right-5 rounded-br-full rounded-bl-full font-manrope font-bold flex justify-end bg-[#7e53d4] text-center px-2 w-14 h-20 text-white'>
                             Up to 40%
@@ -49,9 +50,9 @@ const ProductList = ({ scrollRef, productData }) => {
                     <button className="p-2 font-manrope hover:text-white hover:bg-[#7e53d4] rounded-[8px] border border-[#7e53d4] text-[#7e53d4]">
                         Add to Cart
                     </button>
-                </li>
+                </Link>
             ))}
-        </ul>
+        </div>
     );
 };
 
