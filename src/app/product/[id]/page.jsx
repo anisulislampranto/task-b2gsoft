@@ -1,4 +1,4 @@
-import ProductDetailsClient from "@/components/ProductDetails/ProductDetailsClient";
+import ProductDetailsClient from "../../../components/ProductDetails/ProductDetailsClient";
 import mockData from "../../../assets/products.json";
 
 export async function generateStaticParams() {
