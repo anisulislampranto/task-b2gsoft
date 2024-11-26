@@ -10,32 +10,38 @@ import { useScroll } from '@/hooks/useScroll';
 import SectionHeader from '../SectionHeader/SectionHeader';
 
 const featuredProducts = [
-    {
+    {   
+        id: 10,
         name: 'Indian Saree',
         price: '2,300',
         image: saree
     },
     {
+        id: 11,
         name: 'Hoodie',
         price: '2,300',
         image: hoodie
     },
     {
+        id: 12,
         name: 'Plazu',
         price: '2,300',
         image: plazu
     },
     {
+        id: 13,
         name: 'Jacket',
         price: '2,300',
         image: jacket
     },
     {
+        id: 14,
         name: 'Indian Saree',
         price: '2,300',
         image: saree
     },
     {
+        id: 15,
         name: 'Hoodie',
         price: '2,300',
         image: hoodie
@@ -48,7 +54,7 @@ export default function FeaturedClient() {
 
 
     return (
-        <section className='px-5 md:px-10 py-20 '>
+        <section className='px-5 md:px-10 py-20 font-manrope'>
 
             {/* Heading, Subheading, Arrows */}
             <SectionHeader
@@ -70,7 +76,7 @@ export default function FeaturedClient() {
                         </div>
                         <div className='flex justify-between items-center'>
                             <p>{el.name}</p>
-                            <p><strong>BDT {el.price}</strong></p>
+                            <p className=' font-semibold'>BDT {el.price}</p>
                         </div>
                         <button className='p-2 hover:text-white hover:bg-[#7e53d4] rounded-[8px] border border-[#7e53d4] text-[#7e53d4]'>Add to Cart</button>
                     </li>

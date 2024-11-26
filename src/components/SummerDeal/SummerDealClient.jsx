@@ -91,6 +91,9 @@ const ProductList = ({ scrollRef, productData }) => {
             {productData.map((product, i) => (
                 <li key={i} className="p-2 flex flex-col gap-4 bg-white rounded-2xl">
                     <div className="relative h-80 w-72 bg-[#f6f5fe] rounded-[8px]">
+                        <div className=' absolute right-5 rounded-br-full rounded-bl-full font-manrope font-bold flex justify-end bg-[#7e53d4] text-center px-2 w-14 h-20 text-white'>
+                            Up to 40%
+                        </div>
                         <Image
                             className="absolute object-contain"
                             src={product.image}
@@ -108,13 +111,13 @@ const ProductList = ({ scrollRef, productData }) => {
                             ({product.ratings.length})
                         </p>
                     </div>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center font-manrope">
                         <p>{product.name}</p>
-                        <p>
-                            <strong>BDT {product.price}</strong>
+                        <p className=' font-semibold'>
+                            BDT {product.price}
                         </p>
                     </div>
-                    <button className="p-2 hover:text-white hover:bg-[#7e53d4] rounded-[8px] border border-[#7e53d4] text-[#7e53d4]">
+                    <button className="p-2 font-manrope hover:text-white hover:bg-[#7e53d4] rounded-[8px] border border-[#7e53d4] text-[#7e53d4]">
                         Add to Cart
                     </button>
                 </li>
@@ -148,6 +151,10 @@ export default function SummerDealClient() {
             {/* Product List */}
             <ProductList scrollRef={scrollRef1} productData={productData} />
             <ProductList scrollRef={scrollRef2} productData={productData} />
+
+            <div className=' flex justify-center mt-10'>
+                <button className='bg-[#7e53d4] hover:bg-transparent border border-[#7e53d4] hover:text-[#7e53d4] text-white p-2 w-36 rounded-lg'>See more</button>
+            </div>
         </div>
     );
 }
