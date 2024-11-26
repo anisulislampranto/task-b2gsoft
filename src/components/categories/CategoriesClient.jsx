@@ -44,11 +44,11 @@ export default function CategoriesClient() {
                 </div>
             </div>
 
-            <ul className=' flex flex-col gap-10 items-center lg:hidden'>
+            <ul className=' flex flex-col gap-28 items-center lg:hidden mt-20'>
                 {categories.map((el) =>
                     <li key={el.id} className=' flex flex-col items-start gap-10'>
-                        <div className='relative bg-[#eeecfb] h-[25rem] sm:h-[31rem] w-full sm:w-[28rem] flex justify-center '>
-                            <div className=' bottom-[15rem] sm:bottom-[5rem] relative h-[40rem] sm:h-[36rem] w-full sm:w-[25rem]'>
+                        <div className='relative bg-[#eeecfb] h-[25rem] sm:h-[31rem] w-[21rem] sm:w-[28rem] flex justify-center '>
+                            <div className=' bottom-[11rem] sm:bottom-[11rem] relative h-[36rem] sm:h-[42rem] w-full sm:w-[25rem]'>
                                 <Image className=' absolute object-cover' src={el.image} alt='image' fill />
                             </div>
                         </div>
