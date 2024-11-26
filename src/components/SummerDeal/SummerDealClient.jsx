@@ -6,22 +6,11 @@ import { useScroll } from '@/hooks/useScroll';
 import Image from 'next/image';
 import StarIcon from '@/utils/StarIcon';
 import products from '../../assets/products.json'
+import StarRating from '@/utils/StarRating';
 
 
 const ProductList = ({ scrollRef, productData }) => {
-    const MAX_RATING = 5;
 
-    const getStars = (rating) => {
-        const stars = [];
-        for (let i = 1; i <= MAX_RATING; i++) {
-            if (i <= rating) {
-                stars.push('#ffc703'); 
-            } else {
-                stars.push('transparent'); 
-            }
-        }
-        return stars;
-    };
 
     return (
         <ul ref={scrollRef} className="flex gap-10 overflow-x-scroll mt-10">
@@ -43,11 +32,9 @@ const ProductList = ({ scrollRef, productData }) => {
 
                     {/* Ratings */}
                     <div className='flex gap-2 items-center'>
-                        <div className="flex gap-1">
-                            {getStars(product.ratings.reduce((acc, curr) => acc + curr.rating, 0) / product.ratings.length).map((fill, index) => (
-                                <StarIcon key={index} fill={fill} />
-                            ))}
-                        </div>
+                        <StarRating
+                            rating={product.ratings.reduce((acc, curr) => acc + curr.rating, 0) / product.ratings.length}
+                        />
                         <p className="font-nunitoSans">
                             ({product.ratings.length})
                         </p>
