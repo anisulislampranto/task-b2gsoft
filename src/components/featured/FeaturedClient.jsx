@@ -5,12 +5,11 @@ import saree from '../../assets/saree.webp';
 import hoodie from '../../assets/hoodie.webp';
 import plazu from '../../assets/pant.webp';
 import jacket from '../../assets/jacket.webp';
-import Image from 'next/image';
 import { useScroll } from '@/hooks/useScroll';
 import SectionHeader from '../SectionHeader/SectionHeader';
 import Products from '../products/Products';
 
-const featuredProducts = [
+export const featuredProducts = [
     {   
         id: 10,
         name: 'Indian Saree',

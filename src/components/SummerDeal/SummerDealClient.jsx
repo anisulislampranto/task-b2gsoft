@@ -101,6 +101,8 @@ const ProductList = ({ scrollRef, productData }) => {
                             fill
                         />
                     </div>
+
+                    {/* Ratings */}
                     <div className='flex gap-2 items-center'>
                         <div className="flex gap-1">
                             {getStars(product.ratings.reduce((acc, curr) => acc + curr.rating, 0) / product.ratings.length).map((fill, index) => (
@@ -111,6 +113,7 @@ const ProductList = ({ scrollRef, productData }) => {
                             ({product.ratings.length})
                         </p>
                     </div>
+
                     <div className="flex justify-between items-center font-manrope">
                         <p>{product.name}</p>
                         <p className=' font-semibold'>
